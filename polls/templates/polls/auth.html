@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Hadoop Grid Engine</title>
+
+    <meta name="description" content="Index Page">
+    <meta name="author" content="Anchit Arnav">
+    {% load static %}
+    <link href="{% static "polls/src/css/bootstrap.min.css" %}" rel="stylesheet">
+    <link href="{% static "polls/src/css/style.css" %}" rel="stylesheet">
+
+    <script src="{% static "polls/src/js/jquery.min.js" %}"></script>
+    <script src="{% static "polls/src/js/bootstrap.min.js" %}"></script>
+    <script src="{% static "polls/src/js/scripts.js" %}"></script>
+    
+
+  </head>
+  <body>
+    <div class="container-fluid">
+	<div class="row" style="height: 100px;">
+		<div class="col-md-12">
+		<div class="col-md-4">
+		</div>
+		<div class="col-md-4" class="page-header">
+		<h1>
+			<center>
+				Hadoop Cluster Engine
+			</center>
+		</h1>
+		</div>
+		<div class="col-md-4">
+		</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4">
+		</div>
+		<div class="col-md-4">
+			<form class="form-horizontal" role="form" method="post" enctype="multipart/form-data">
+			{%csrf_token%}
+				<div class="form-group">
+					 
+					<label for="inputEmail3">
+						Username
+					</label>
+					
+						<input class="form-control" name="username" id="username" />
+					
+				</div>
+				<div class="form-group">
+					 
+					<label for="inputPassword3">
+						Password
+					</label>
+					
+						<input type="password" class="form-control" id="password" name="password" />
+					
+				</div>
+				<div class="form-group">
+					
+						<div class="checkbox">
+							 
+							<label>
+								<input type="checkbox" /> Remember me
+							</label>
+						</div>
+					
+				</div>
+				<div class="form-group">
+					
+						 
+						<button type="submit" class="btn btn-primary">
+							Sign in
+						</button>
+				
+				</div>
+			</form>
+			{% if invalid %}
+			<div class="alert alert-danger">
+  				<strong>Invalid Credentials : </strong>Either the username or password entered by you was wrong please try again
+			</div>
+			{% endif %}
+		</div>
+		<div class="col-md-4">
+		</div>
+	</div>
+</div>
+  </body>
+</html>

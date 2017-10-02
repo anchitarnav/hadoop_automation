@@ -1,0 +1,11 @@
+-rw-r--r--   3 root supergroup          7 2017-05-31 06:14 /abc.txt_06_14_35
+-rw-r--r--   3 root supergroup       1534 2017-04-22 11:40 /goodfile.txt_11_40_46
+drwxr-xr-x   - root supergroup          0 2017-04-22 12:49 /output_goodfile.txt_11_40_4612_47_05
+drwxr-xr-x   - root supergroup          0 2017-05-19 08:56 /output_smallfile.txt_12_44_0508_55_04
+drwxr-xr-x   - root supergroup          0 2017-05-19 09:21 /output_smallfile.txt_12_44_0509_21_08
+drwxr-xr-x   - root supergroup          0 2017-04-16 14:18 /output_smallfile.txt_13_21_0814_16_02
+drwxr-xr-x   - root supergroup          0 2017-04-16 14:39 /output_smallfile.txt_13_21_0814_39_18
+-rw-r--r--   3 root supergroup         76 2017-04-22 12:44 /smallfile.txt_12_44_05
+-rw-r--r--   3 root supergroup         76 2017-04-16 13:21 /smallfile.txt_13_21_08
+-rw-r--r--   3 root supergroup        177 2017-05-19 08:52 /test.sh_08_52_25
+drwxr-xr-x   - root supergroup          0 2017-04-16 10:09 /tmp

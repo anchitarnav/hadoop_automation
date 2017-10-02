@@ -1,0 +1,70 @@
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!--meta name="viewport" content="width=device-width, initial-scale=1"-->
+
+		<title>Hadoop Grid Engine</title>
+
+		<meta name="description" content="Source code generated using layoutit.com">
+		<meta name="author" content="LayoutIt!">
+
+		{% load static %}
+		<link href="{% static "polls/src/css/bootstrap.min.css" %}" rel="stylesheet">
+		<link href="{% static "polls/src/css/style.css" %}" rel="stylesheet">
+
+		<script src="{% static "polls/src/js/jquery.min.js" %}"></script>
+		<script src="{% static "polls/src/js/bootstrap.min.js" %}"></script>
+		<script src="{% static "polls/src/js/scripts.js" %}"></script>
+
+	</head>
+	<body>
+
+		<div class="container-fluid">
+			<div class="row">
+				<!--div class="col-md-12"-->
+					<!--div class="tabbable" id="tabs-200751"-->
+						<ul class="nav nav-tabs">
+							<li>
+								<a href="{%url 'files_view' %}">View File System</a>
+							</li>
+							<li>
+								<a href="{%url 'files_add' %}">Add to File System</a>
+							</li>
+							<li class="active">
+								<a href="{%url 'jobview' %}">VIEW JOBS</a>
+							</li>
+							<li>
+								<a href="{%url 'jobadd' %}">ADD JOB</a>
+							</li>
+							<li class="dropdown pull-right">
+					 			<a href="#" data-toggle="dropdown" class="dropdown-toggle">User Options<strong class="caret"></strong></a>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="#">View Profile</a>
+										</li>
+										<li>
+											<a href="#">My submissions</a>
+										</li>
+										<li>
+											<a href="#">My tasks</a>
+										</li>
+										<li class="divider">
+										</li>
+										<li>
+											<a href="{%url 'auth_logout' %}">Logout</a>
+										</li>
+									</ul>
+							</li>
+						</ul>
+			</div>
+						<div>
+								<iframe style="position: absolute;width: 100% ; height: 100%; border: none" src="http://alpha:50030/jobtracker.jsp"></iframe>
+						</div>
+					<!--/div-->
+				<!--/div-->
+			
+		</div>
+	</body>
+	</html>

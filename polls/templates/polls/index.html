@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Hadoop Grid Engine</title>
+
+    <meta name="description" content="Index Page">
+    <meta name="author" content="Anchit Arnav">
+    {% load static %}
+    <link href="{% static "polls/src/css/bootstrap.min.css" %}" rel="stylesheet">
+    <link href="{% static "polls/src/css/style.css" %}" rel="stylesheet">
+
+    <script src="{% static "polls/src/js/jquery.min.js" %}"></script>
+    <script src="{% static "polls/src/js/bootstrap.min.js" %}"></script>
+    <script src="{% static "polls/src/js/scripts.js" %}"></script>
+    
+
+  </head>
+  <body>
+
+    <div class="container-fluid">
+    <div class="row" style="height: 200px;">
+    	<div class="col-md-4">
+		</div>
+		<div class="col-md-4" class="page-header">
+		<h1>
+			<center>
+				Hadoop Cluster Engine
+			</center>
+		</h1>
+		</div>
+		<div class="col-md-4">
+		</div>
+    </div>
+	<div class="row">
+		<div class="col-md-4">
+		</div>
+		<div class="col-md-4" style="height: 500px;">
+			 
+			<a href="{% url 'hadoopadmin' %}" type="button" class="btn btn-lg btn-block active btn-primary">
+				Hadoop Administration
+			</a> 
+			<a href="{% url 'files_view' %}" type="button" class="btn btn-primary btn-lg btn-block">
+				Files and Jobs
+			</a>
+		</div>
+		<div class="col-md-4">
+		</div>
+	</div>
+</div>
+  </body>
+</html>

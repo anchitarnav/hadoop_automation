@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+{% load static %}
+  <title>Hadoop Grid Engine</title>
+
+  <link href="{% static "polls/src/css/bootstrap.min.css" %}" rel="stylesheet">
+  <link href="{% static "polls/src/css/style.css" %}" rel="stylesheet">
+
+  <script src="{% static "polls/src/js/jquery.min.js" %}"></script>
+  <script src="{% static "polls/src/js/bootstrap.min.js" %}"></script>
+  <script src="{% static "polls/src/js/scripts.js" %}"></script>
+
+</head>
+<body>
+
+    <div class="container-fluid">
+      <div class="row">
+        <!--div class="col-md-12"-->
+          <!--div class="tabbable" id="tabs-200751"-->
+            <ul class="nav nav-tabs">
+              <li>
+                <a href="{%url 'hadoopadmin'%}">Administrative Jobs</a>
+              </li>
+              <li class="active">
+                <a href="{%url 'hadoopfsck'%}">Filesystem Check Utils</a>
+              </li>
+              <li>
+                <a href="#">Other Maintainance tasks</a>
+              </li>
+              <li class="dropdown pull-right">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle">User Options<strong class="caret"></strong></a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="#">Admin Job 1</a>
+                    </li>
+                    <li>
+                      <a href="#">Admin job 2</a>
+                    </li>
+                    <li>
+                      <a href="#">Admin job 3</a>
+                    </li>
+                    <li class="divider">
+                    </li>
+                    <li>
+                      <a href="{%url 'auth_logout' %}">Logout</a>
+                    </li>
+                  </ul>
+              </li>
+            </ul>
+
+            
+      </div>
+      <div class="row margin-top:30px">
+      <div class="col-md-3">
+              <div class="row">
+       
+              <p>
+                <div class="col-md-6 ">
+                  Files open for write
+                </div>
+                <div class="col-md-6">
+                  <a href="{%url 'hadoopfsck'%}?id=1" class="btn btn-primary btn-block">Get</a>
+                </div>
+              </p>
+           
+      </div>
+            <div class="row">
+
+              <p>
+                <div class="col-md-6">
+                  Files being checked
+                </div>
+                <div class="col-md-6">
+                  <a href="{%url 'hadoopfsck'%}?id=2" class="btn btn-primary btn-block">Get</a>
+                </div>
+              </p>
+           
+      </div>
+      <div class="row">
+     
+              <p>
+                <div class="col-md-6">
+                  Block Report
+                </div>
+                <div class="col-md-6">
+                  <a href="{%url 'hadoopfsck'%}?id=3" class="btn btn-primary btn-block">Get</a>
+                </div>
+              </p>
+         
+      </div>
+      <div class="row">
+  
+              <p>
+                <div class="col-md-6">
+                  Block locations
+                </div>
+                <div class="col-md-6">
+                  <a href="{%url 'hadoopfsck'%}?id=4" class="btn btn-primary btn-block">Get</a>
+                </div>
+              </p>
+      </div>
+
+      <div class="row">
+
+              <p>
+                <div class="col-md-6">
+                  Racks
+                </div>
+                <div class="col-md-6">
+                  <a href="{%url 'hadoopfsck'%}?id=5" class="btn btn-primary btn-block">Get</a>
+                </div>
+              </p>
+           
+      </div>
+      </div>
+      <div class="col-md-9">
+        {% autoescape off %}
+    <pre>{{useroutput}}</pre>
+{% endautoescape %}
+
+      </div>
+    </div>
+
+    </div>
+</body>
+</html>

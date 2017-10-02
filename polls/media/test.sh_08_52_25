@@ -1,0 +1,9 @@
+dialog --menu "Enter your choice" 10 10 2 1 "One" 2 "Two" 2>temp.txt
+choice=$(cat temp.txt);
+if [[ $choice -eq 1 ]]
+then
+echo "one"
+elif [[ $choice -eq 2 ]]
+then 
+echo "two"
+fi

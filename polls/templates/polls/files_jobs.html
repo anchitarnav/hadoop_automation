@@ -1,0 +1,123 @@
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Bootstrap 3, from LayoutIt!</title>
+
+		<meta name="description" content="Source code generated using layoutit.com">
+		<meta name="author" content="LayoutIt!">
+
+		{% load static %}
+		<link href="{% static "polls/src/css/bootstrap.min.css" %}" rel="stylesheet">
+		<link href="{% static "polls/src/css/style.css" %}" rel="stylesheet">
+
+		<script src="{% static "polls/src/js/jquery.min.js" %}"></script>
+		<script src="{% static "polls/src/js/bootstrap.min.js" %}"></script>
+		<script src="{% static "polls/src/js/scripts.js" %}"></script>
+
+	</head>
+	<body>
+
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="tabbable" id="tabs-200751">
+						<ul class="nav nav-tabs">
+							<li class="active">
+								<a href="#panel-294571" data-toggle="tab">View File System</a>
+							</li>
+							<li>
+								<a href="#panel-2" data-toggle="tab">Add to File System</a>
+							</li>
+							<li>
+								<a href="#panel-108785" data-toggle="tab">JOBS</a>
+							</li>
+							<li class="dropdown pull-right">
+					 			<a href="#" data-toggle="dropdown" class="dropdown-toggle">User Options<strong class="caret"></strong></a>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="#">View Profile</a>
+										</li>
+										<li>
+											<a href="#">My submissions</a>
+										</li>
+										<li>
+											<a href="#">My tasks</a>
+										</li>
+										<li class="divider">
+										</li>
+										<li>
+											<a href="{%url 'auth_logout' %}">Logout</a>
+										</li>
+									</ul>
+							</li>
+						</ul>
+						<div class="tab-content">
+							<div class="tab-pane active" id="panel-294571">
+								<iframe class="embed-responsive-item" src="http://192.168.125.128:50070"></iframe>
+							</div>
+							<div class="tab-pane active" id="panel-2">
+								<div class="container-fluid">
+									<div class="row">
+										<div class="col-md-4">
+										</div>
+										<div class="col-md-4">
+
+
+
+											<form role="form" method="post" enctype="multipart/form-data">
+
+												<div class="form-group">
+													
+													<label for="exampleInputEmail1">
+														Path to Upload
+													</label>
+													<input class="form-control" id="filename_put">
+												</div>
+												<div class="form-group">
+													<label for="exampleInputFile">
+														Choose File
+													</label>
+													<input type="file" name="myfile">
+													<p class="help-block">
+														Choose the file you want to put on cluster
+													</p>
+												</div>
+												<div class="checkbox">
+													
+													<label>
+														<input type="checkbox"> Inform me when complete
+													</label>
+												</div> 
+												<button type="submit" class="btn btn-default">
+													Upload
+												</button>
+											</form>
+
+									{% if uploaded_file_url %}
+									<p>File uploaded at: <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>
+									{% endif %}
+										
+
+
+										</div>
+										<div class="col-md-4">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane" id="panel-108785">
+								<p>
+									OOP -- JOBS
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	</html>

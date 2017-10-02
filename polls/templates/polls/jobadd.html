@@ -1,0 +1,133 @@
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Hadoop Grid Engine</title>
+
+		<meta name="description" content="Source code generated using layoutit.com">
+		<meta name="author" content="LayoutIt!">
+
+		{% load static %}
+		<link href="{% static "polls/src/css/bootstrap.min.css" %}" rel="stylesheet">
+		<link href="{% static "polls/src/css/style.css" %}" rel="stylesheet">
+
+		<script src="{% static "polls/src/js/jquery.min.js" %}"></script>
+		<script src="{% static "polls/src/js/bootstrap.min.js" %}"></script>
+		<script src="{% static "polls/src/js/scripts.js" %}"></script>
+		<!--script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"--><!--/script-->
+
+		
+	</head>
+
+
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12">
+					
+						<ul class="nav nav-tabs">
+							<li>
+								<a href="{%url 'files_view' %}">View File System</a>
+							</li>
+							<li>
+								<a href="{%url 'files_add' %}">Add to File System</a>
+							</li>
+							<li>
+								<a href="{%url 'jobview' %}">VIEW JOBS</a>
+							</li>
+							<li class=active>
+								<a href="{%url 'jobadd' %}">ADD JOB</a>
+							</li>
+							<li class="dropdown pull-right">
+					 			<a href="#" data-toggle="dropdown" class="dropdown-toggle">User Options<strong class="caret"></strong></a>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="#">View Profile</a>
+										</li>
+										<li>
+											<a href="#">My submissions</a>
+										</li>
+										<li>
+											<a href="#">My tasks</a>
+										</li>
+										<li class="divider">
+										</li>
+										<li>
+											<a href="{%url 'auth_logout' %}">Logout</a>
+										</li>
+									</ul>
+							</li>
+						</ul>
+						<div class="tab-content">
+							
+							<div class="tab-pane active" id="panel-2">
+								<div class="container-fluid">
+								<form role="form" method="post" enctype="multipart/form-data">
+											{%csrf_token%}
+									<div class="row" style="height: 50px"></div>
+									<div class="row" style="height: 100px">
+										
+										<div class="col-md-3">
+											<div>
+												<label for="exampleInputFile">
+														Select Main jar file
+													</label>
+											</div>
+										<div>
+											{{ form.jar_by }}
+										</div>
+										</div>
+										<div class="col-md-1"></div>
+										<div class="col-md-3">
+											<div>
+												<label for="exampleInputFile">
+														Select Handle
+													</label>
+											</div>
+										
+										<div>
+											{{ form.handle_by }}
+										</div>
+										</div>
+										<div class="col-md-1"></div>
+										<div class="col-md-3">
+										
+										<div>
+											<label for="exampleInputFile">
+														Choose File
+													</label>
+										</div>
+										
+										<div>
+											{{ form.filename_by }}
+										</div>
+										
+										</div>
+										<div class="col-md-1"></div>
+										
+									</div>
+									<div class="row">
+										<div class="col-md-4"></div>
+										<div class="col-md-4" style="height: 300px">
+											<button  type="submit" class="btn btn-success btn-block">
+												Schedule with first available queue
+											</button>
+										</div>
+										<div class="col-md-4">
+											<p>{{jarname}}</p>
+											<p>{{handlename}}</p>
+											<p>{{filename}}</p>
+										</div>
+									</div>
+									</form>
+								</div>
+							</div>
+						</div>
+				
+				</div>
+			</div>
+		</div>
+	</body>
+	</html>
